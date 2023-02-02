@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1 class="text-center">Products List </h1>
+    {% for product in products  %}
+            <li class="text-center"><a  href="/edit/{{product.id}}">{{product}}</a>
+                &nbsp;
+                <a href="/delete{{product.id}}">Delete</a>
+            </li>
+    
+    {% endfor %}
+{% endblock body %}
